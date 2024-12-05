@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Arian's Webpage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #121212; /* Dark theme background */
+            color: #f4f4f4;
+        }
+        header {
+            background-color: #1c2124;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #f1f3f3;
+        }
+        header nav {
+            display: flex;
+            gap: 25px;
+        }
+        header nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        header nav a:hover {
+            color: #c0c0c0;
+        }
+        .about {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #1a1a1a; /* Darker background for contrast */
+            background-image: url('homebackgroundimage.jpg'); /* Use your local image file here */
+
+            color: #e1e1e1;
+        }
+        .about h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #b6b6b6; /* Light gray for the title */
+            font-family: 'Georgia', serif;
+        }
+        .about p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #dcdcdc; /* Slightly brighter for readability */
+        }
+        .about img {
+            margin-top: 20px;
+            border: 5px solid #9e7d4e; /* Muted gold border for image */
+            border-radius: 10px;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+        }
+        .social-icons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .social-icons a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+        }
+        .social-icons img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .social-icons img:hover {
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0a0a0a;
+            color: #c0c0c0;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #0074d9;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Arian's Webpage</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="music.html">Music</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="family.html">Family</a>
+        </nav>
+    </header>
+
+    <section class="about">
+        <h1>Let me introduce myself!</h1>
+        <p>Welcome to my personal webpage! My full name is Ahmad Arian Syah bin Abdul Jalil but you can call me Arian.</p>
+        <p>I was born and live in Alor Setar. I'm passionate about music and enjoy sharing it with others.</p>
+        <p>Feel free to explore and enjoy my webpage!</p>
+        <img src="IMG_1584.jpg" alt="Arian's Portrait">
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/ar3yannn/profilecard/?igsh=Nm54MWdsemZkaHB6" target="_blank">
+                <img src="instalogo.jpg" alt="Instagram">
+            </a>
+            <a href=" https://www.tiktok.com/@co_ntra?_t=8rxhtMTUsFj&_r=1 " target="_blank">
+                <img src="tiktoklogo.jpg" alt="TikTok">
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <h3>I'm currently listening to:</h3>
+        <audio controls>
+            <source src="Song1.mp3" type="audio/mp3">
+        </audio>
+        <audio controls>
+            <source src="Song2.mp3" type="audio/mp3">
+        </audio>
+        <audio controls>
+            <source src="Song3.mp3" type="audio/mp3">
+        </audio>
+    </footer>
+</body>
+</html>

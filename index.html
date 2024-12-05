@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arian's webpage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+        }
+        header {
+            background-color: #1c2124;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #f1f3f3;
+        }
+        header nav {
+            display: flex;
+            gap: 25px;
+        }
+        header nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        header nav a:hover {
+            color: #c0c0c0;
+        }
+        .about {
+            text-align: center;
+            padding: 150px 20px;
+            background-image: url('homebackgroundpic.jpg'); /* Use your local image file here */
+            color: #ffffff;
+
+        }
+        .about h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px); /* Slide in from below */
+            animation: bounceIn 1.5s ease-in-out forwards;
+            animation-delay: 0.3s; /* H1 appears first */
+        }
+        .about p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(20px); /* Slide in from below */
+            animation: bounceIn 1.5s ease-in-out forwards;
+            animation-delay: 0.6s; /* Paragraph appears after H1 */
+        }
+        .about button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #ffffff;
+            background-color: #8697a5;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            opacity: 0;
+            transform: scale(0.9); /* Smaller size */
+            animation: bounceIn 1.5s ease-out forwards;
+            animation-delay: 0.9s; /* Button appears last */
+        }
+        .about button:hover {
+            background-color: #8697a5;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 3;
+                transform: translateY(0); /* Move to final position */
+            }
+        }
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .quotes {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            background-color: #121212;
+        }
+        .quote {
+            text-align: center;
+            max-width: 300px;
+        }
+        .quote h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .quote p {
+            font-size: 1rem;
+            color: #c0c0c0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0a0a0a;
+            color: #c0c0c0;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #0074d9;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Arian's Webpage</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="music.html">Music</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="family.html">Family</a>
+        </nav>
+    </header>
+
+    <section class="about">
+        <h1>Stay if you wanna know me!</h1>
+        <p>This is a webpage about me, myself and my hobby!</p>
+        <button onclick="location.href='aboutme.html'">About Me!</button>
+
+    </section>
+
+    <section class="quotes">
+        <div class="quote">
+            <h3>Vincent van Gogh</h3>
+            <p>"What would life be if we had no courage to attempt anything?"</p>
+        </div>
+        <div class="quote">
+            <h3>Leonardo da Vinci</h3>
+            <p>"Art is never finished, only abandoned."</p>
+        </div>
+        <div class="quote">
+            <h3>Claude Monet</h3>
+            <p>"The richness I achieve comes from nature, the source of my inspiration."</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="playlist">
+            <h3>I'm currently listening to this!</h3>
+            <p>Ego - Margasatwa </p>
+            <audio id="audio1" controls>
+                <source src="Song1.mp3" type="audio/mp3">
+            </audio>
+            <p>Caramel Cream - Midnight Fusic</p>
+            <audio id="audio2" controls>
+                <source src="Song2.mp3" type="audio/mp3">
+            </audio>
+            <p>To The Bone - Pamungkas</p>
+            <audio id="audio3" controls>
+                <source src="Song3.mp3" type="audio/mp3">
+            </audio>
+        </div>
+    </footer>
+</body>
+</html>

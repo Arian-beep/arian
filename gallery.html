@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Photography</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a; /* Dark grey theme */
+            color: #e0e0e0;
+        }
+
+        header {
+            background-color: #1c2124;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #f1f3f3;
+        }
+
+        header nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        header nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #c0c0c0;
+        }
+
+        /* Page Title */
+        .page-title {
+            position: absolute;
+            top: 80px;
+            left: 20px;
+            font-size: 3rem;
+            font-family: 'Georgia', serif;
+            color: #dcdcdc;
+        }
+
+        /* Gallery Styling */
+        .gallery-section {
+            max-width: 1200px;
+            margin: 100px auto 30px;
+            padding: 20px;
+        }
+
+        .gallery-title {
+            font-size: 2rem;
+            text-align: center;
+            margin: 40px 0 20px;
+            color: #e0e0e0;
+            font-family: 'Georgia', serif;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery-item img, .gallery-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-item:hover::after {
+            content: "View";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .gallery-item video {
+            border: 2px solid #444;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #0a0a0a;
+            color: #c0c0c0;
+        }
+
+        footer audio {
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Arian's Webpage</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="#">Music</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="#">Family</a>
+        </nav>
+    </header>
+
+    <h1 class="page-title">Photography</h1>
+
+    <section class="gallery-section">
+        <h2 class="gallery-title">Myself</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="IMG_1584.jpg" alt="Myself 1">
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_1918.jpg" alt="Myself 2">
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_3671.jpg" alt="Myself 3">
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_4091.jpg" alt="Myself 4">
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_1563.jpg" alt="Myself 5">
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_1434.jpg" alt="Myself 6">
+            </div>
+        </div>
+
+        <h2 class="gallery-title">My Art</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="IMG_1553.jpg" alt="Art 1">
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_1566.jpg" alt="Art 2">
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_3985.jpg" alt="Art 3">
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_3986.jpg" alt="Art 4">
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_3990.jpg" alt="Art 5">
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_3991.jpg" alt="Art 6">
+            </div>
+        </div>
+
+        <h2 class="gallery-title">Videos</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <video controls>
+                    <source src="VID1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="gallery-item">
+                <video controls>
+                    <source src="VID2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h3>I'm currently listening to:</h3>
+        <audio controls>
+            <source src="Song1.mp3" type="audio/mp3">
+        </audio>
+        <audio controls>
+            <source src="Song2.mp3" type="audio/mp3">
+        </audio>
+        <audio controls>
+            <source src="Song3.mp3" type="audio/mp3">
+        </audio>
+    </footer>
+</body>
+</html>
